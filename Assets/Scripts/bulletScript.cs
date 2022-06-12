@@ -10,6 +10,7 @@ public class bulletScript : MonoBehaviour
 
     public float bulletForce = 20f;
 
+    Renderer rndr;
     // Update is called once per frame
     void Update()
     {
@@ -17,11 +18,22 @@ public class bulletScript : MonoBehaviour
         {
             Shoot();
         }
+        
     }
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rndr = GetComponent<Renderer>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        if (!rndr.isVisible)
+        {
+            Destroy(bullet);
+            print("destroyed");
+        }
+        //{
+        //    Destroy(bullet);
+        //}
+       
     }
 }
