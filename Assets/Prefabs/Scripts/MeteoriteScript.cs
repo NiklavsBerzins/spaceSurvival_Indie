@@ -35,13 +35,15 @@ public class MeteoriteScript : MonoBehaviour
             Destroy(gameObject);
             print("Meteorite destroyed");
         }
+
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+        private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.name == "Bullet(Clone)")
         {
             Destroy(gameObject);
         }
     }
-
+   
 }
