@@ -24,8 +24,14 @@ public class MeteoriteController : MonoBehaviour
     }
 
 
+
+
     IEnumerator SpawnMeteorite()
     {
+
+        // ir janosuta infa no sejienes uz citu funkciju 
+        //funkcija();
+
         // A random point on an imaginary circle
         Vector3 meteoriteSpawnPoint = Random.insideUnitCircle.normalized * radius;
 
@@ -33,6 +39,8 @@ public class MeteoriteController : MonoBehaviour
         // Instantiates a meteorite on the circle around player
         GameObject meteorite = Instantiate(meteoritePrefab, player.position +
             meteoriteSpawnPoint, Quaternion.identity);
+
+        
 
 
         // Sets the velocity of the meteorite towards player
@@ -49,6 +57,11 @@ public class MeteoriteController : MonoBehaviour
         StartCoroutine(SpawnMeteorite());
 
     }
+
+    //private GameObject funkcija(meteorite)
+    //{
+    //    return;
+    //}
         
 }
 
