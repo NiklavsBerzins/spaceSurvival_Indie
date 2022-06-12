@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 0fa5b93b971534999848c75efd442b9e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - meteoritePrefab: {fileID: 2506973372242247410, guid: 90851df9f5eb04516bf1ac0fb121a626, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
