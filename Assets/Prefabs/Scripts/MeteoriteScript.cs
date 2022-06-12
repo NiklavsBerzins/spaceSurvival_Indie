@@ -7,16 +7,18 @@ public class MeteoriteScript : MonoBehaviour
 
     public bool canDespawn;
     Renderer rndr;
+    public MeteoriteCounter meteoriteCounter;
 
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
         rndr = GetComponent<Renderer>();
+        meteoriteCounter = FindObjectOfType<MeteoriteCounter>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (rndr.isVisible)
@@ -24,26 +26,24 @@ public class MeteoriteScript : MonoBehaviour
             canDespawn = true;
         }
 
-
-        
     }
 
-    private void OnTriggerExit2D (Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (canDespawn)
         {
             Destroy(gameObject);
             print("Meteorite destroyed");
         }
-
     }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.name == "Bullet(Clone)")
         {
             Destroy(gameObject);
+            meteoriteCounter.MeteoriteDown();
         }
     }
-   
+
 }
