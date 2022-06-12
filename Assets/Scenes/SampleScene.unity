@@ -123,6 +123,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &64736493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64736495}
+  - component: {fileID: 64736494}
+  m_Layer: 0
+  m_Name: MeteoriteController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &64736494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64736493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef41534b229b44037885342ab5fb7083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteoritePrefab: {fileID: 2506973372242247410, guid: 90851df9f5eb04516bf1ac0fb121a626, type: 3}
+  radius: 40
+  player: {fileID: 2742434999945715431, guid: 8680a392d815048aab516c1dc3652171, type: 3}
+  spawnTime: 3
+  meteoriteSpeed: 1
+--- !u!4 &64736495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64736493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7993107, y: 0.32710275, z: -0.24092546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &403251236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 451548684537621799, guid: d54153351b74640bb9cbf6e0420abc89, type: 3}
