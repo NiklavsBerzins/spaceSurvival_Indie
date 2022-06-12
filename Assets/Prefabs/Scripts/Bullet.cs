@@ -19,6 +19,14 @@ public class Bullet : MonoBehaviour
             print("destroyed");
         }
     }
+    void OnCollisionEnter(Collision collider)
+    {
+        print("Its a hit");
+        if (collider.gameObject.name == "Meteorite(clone)")
+        {
+            Destroy(collider.gameObject);
+        } 
+    }
 
     // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
